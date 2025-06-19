@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Fare Finder – Compare Cab Fares</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD-Ef0fwaFgJVamXxPxZL-ocV52lUg6_UQ&libraries=places"></script>
+</head>
+<body>
+  <header>
+    <img src="logo.png" alt="Fare Finder Logo" class="logo" />
+    <h1>Fare Finder</h1>
+    <p>Get the best ride. Save every time.</p>
+    <button onclick="detectLocation()">Use My Location</button>
+  </header>
+  <main>
+    <div class="form">
+      <input id="pickup" type="text" placeholder="Pickup location" />
+      <input id="drop" type="text" placeholder="Drop location" />
+      <input id="distance" type="number" placeholder="Distance (km)" readonly />
+      <button id="search">Compare Fares</button>
+    </div>
+    <div id="results"></div>
+    <div id="map" style="height: 400px; margin-top: 20px;"></div>
+  </main>
+  <script src="fare-logic.js"></script>
+  <script src="maps.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
